@@ -24,7 +24,7 @@ func main()  {
 		//是否取消压缩默认值false，即启用压缩
 		DisableCompression: true,
 		//指定每个请求的目标主机之间最大非活跃连接（keep-alive）数量，如果不指定，默认使用
-		MaxIdleConnsPerHost:10
+		MaxIdleConnsPerHost:10,
 
 	}
 	client := &http.Client{Transport: tr}
