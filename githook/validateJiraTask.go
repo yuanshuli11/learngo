@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	m string //msg信息
+	m string //msg信息  
 )
 
 func main() {
