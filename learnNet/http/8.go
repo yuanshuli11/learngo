@@ -26,7 +26,6 @@ func main() {
 
 			fmt.Printf("DNS Start Info: %+v\n", beginTime)
 		},
-
 	}
 	req = req.WithContext(httptrace.WithClientTrace(req.Context(), trace))
 	_, err := http.DefaultTransport.RoundTrip(req)

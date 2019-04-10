@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 type fooHandler struct {
@@ -12,6 +13,12 @@ type fooHandler struct {
 func (h *fooHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "%s", `{"tt":"33"}`)
 	fmt.Println("fooHandler ServeHTTP")
+	//获取进程id
+	pid :=os.Getpid()
+	fmt.Fprintf(w,"pid: %d\n", pid)
+	//父进程id
+	ppid :=os.Getppid()
+	fmt.Fprintf(w,"ppid: %d\n", ppid)
 }
 type HandlersChain []http.Handler
 
