@@ -42,7 +42,7 @@ func GetJiraTask() interface{} {
 	return nil
 
 }
-  
+
 func getAuth() (authString string) {
 	file, err := ioutil.ReadFile(".pass")
 	if err != nil {
